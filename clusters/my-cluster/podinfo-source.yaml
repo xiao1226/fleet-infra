@@ -2,8 +2,8 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: GitRepository
 metadata:
-  name: podinfo
-  namespace: flux-system
+  name: nginx
+  namespace: nginx
 spec:
   interval: 1m0s
   ref:
