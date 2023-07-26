@@ -1,11 +1,11 @@
----
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: GitRepository
+apiVersion: v1
+kind: Service
 metadata:
   name: nginx
-  namespace: flux-system
 spec:
-  interval: 1m0s
-  ref:
-    branch: master
-  url: https://github.com/stefanprodan/nginx
+  selector:
+    name: nginx
+  clusterIP: None
+  ports:
+  - name: foo # 实际上不需要指定端口号
+    port: 80
